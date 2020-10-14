@@ -12,10 +12,12 @@
 header{
 /* color de fondo */
     text-align: center;
+    width: 0;
     border-style: solid;
     border-width: 5px 3px 2px;
     border-color: red;
     padding-top: 15px;
+    right: 0;
     background-color: lightyellow;
     /* Altura del elemento, tiene que ser un elemento de bloque y 
     la especificaremos en pixeles o en vh */
@@ -27,7 +29,7 @@ header{
     para los demás elementos
     relative, es el valor por defecto, quiere decir que se posicionan
     las cosas unas al lado de otras */
-    position: fixed;
+    
     /* cuando posicionamos de manera absolute o fixed
     podemos decirle a cuánta distancia estará de los bordes
     de la web top, bottom, left, right */
@@ -41,9 +43,14 @@ nav{
     background-color: rgb(200, 195, 195);
     padding-top: 8px;
     height: 50px;
-    position: fixed;
-    padding-right: 5px;
-    right: 0;
+    position: absolute;
+    left: 0;
+    position: absolute;
+    background-color: darkgreen;
+    width: 100%;
+    text-align: center;
+
+    
     width: 85%;
     /* Esto es para subir o bajar elementos cuando se solapen
     a modo de capas. Por defecto el valor es 0 así que 
@@ -55,8 +62,8 @@ nav{
 aside{
     padding: 10px;
     background-color: lightsalmon;
-    position: fixed;
-    left: 0;
+    position: absolute;
+    right: 0;
     width: 15%;
     top: 50px;
     border-right-style: solid;
@@ -72,7 +79,7 @@ aside{
 main{
     background-color: lightskyblue;
     position: absolute;
-    right: 0;
+    left: 0;
     width: 85%;
     top: 50px;
     /* min-height nos permite especificar una altura 
@@ -153,4 +160,14 @@ aside > a:active{
 }
 aside>a{
     border-top-style: solid;
+}
+
+footer{
+    bottom: 0;
+    position: absolute;
+    background-color: darkgreen;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    
 }
