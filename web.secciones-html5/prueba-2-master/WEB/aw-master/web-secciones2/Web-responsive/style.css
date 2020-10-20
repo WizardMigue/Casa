@@ -13,10 +13,12 @@ footer{
     display: none;
 }
 aside{
+    background-color: violet;
     min-height: 50px;
 }
 
 main{
+    background-color: yellow;
     min-height: calc( 100vh - 150px );
 }
 
@@ -63,7 +65,7 @@ main{
     nav, aside, main{
         top: 50px;
         min-height: calc(100vh - 100px)
-        position: absolute; 
+        position: absolute;
     }
 
     aside{
@@ -85,4 +87,14 @@ main{
         bottom: 0;
         height: 20px;
     }   
+}
+
+@media (min-width: 480px){
+nav{
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
 }
