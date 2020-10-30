@@ -12,11 +12,18 @@ body {
 }
 
 footer{
-    display: none;
+    display: block;
 }
 
-header, nav{
-    height: 10vh;
+header{
+    height: 50px;
+}
+
+nav{
+    height: 40px;
+    padding: 8.5px;
+    justify-content: space-around;
+    display: flex;
 }
 
 header, nav, aside, main, footer{
@@ -25,17 +32,44 @@ header, nav, aside, main, footer{
     flex-basis: 100%;
  }
 
+ nav > a{
+     padding: 15px;
+     background-color: gold;
+     border-radius: 3px;
+     border-style: solid;
+     width: 100px;
+     text-align: center;
+     align-items: center;
+     text-decoration: none;
+     color: red;
+     border-style: solid;
+     flex-basis: 15px;
+     height: 55px;
+     
+
+ }
+
+ nav > a:hover{
+     background-color: black;
+     color: chartreuse;
+
+ }
  aside{
      flex-basis: 70px;
      padding: 5px;
      flex-grow: 0;
-     height: 80vh;
+     min-height: calc(100vh - 50px - 40px - 50px);
      text-align: center;
+ }
+
+ aside > h1 {
+     text-align: start;
  }
 
  main{
      flex-basis: 70%;
      flex-grow: 1;
+     overflow: auto;
  }
 
  aside > a > img {
@@ -50,8 +84,17 @@ header, nav, aside, main, footer{
      margin-top: 5px;
 
 @media (min-width: 700px){
-
+    aside > a {
+        display: flex;
+        align-items: center,
+        justify-content: space-around,
+        min-height: calc(100vh - 50px - 40px - 50px);
+    }
     aside{
-        flex-basis: 100px
+        flex-basis: 130px,
+    }
+
+    footer{
+        display: block,
     }
 }
