@@ -20,7 +20,7 @@ header{
 }
 
 nav{
-    height: 40px;
+    height: 60px;
     padding: 8.5px;
     justify-content: space-around;
     display: flex;
@@ -33,7 +33,7 @@ header, nav, aside, main, footer{
  }
 
  nav > a{
-     padding: 15px;
+     padding: 5px;
      background-color: gold;
      border-radius: 3px;
      border-style: solid;
@@ -44,14 +44,19 @@ header, nav, aside, main, footer{
      color: red;
      border-style: solid;
      flex-basis: 15px;
-     height: 55px;
+     height: 35px;
+     transition-duration: 1s;
+     transition-property:color ; flex-basis: ;
+     transition-timing-function: ease;
+     
      
 
  }
 
  nav > a:hover{
      background-color: black;
-     color: chartreuse;
+     color: blue;
+     transform: rotateZ(360deg);
 
  }
  aside{
